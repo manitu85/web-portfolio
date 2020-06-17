@@ -1,25 +1,3 @@
-// import Link from 'next/link'
-// import Layout from "../components/layout";
-
-// export default () => {
-//   return(
-//     <>
-//       {/* <h1>Home page</h1>
-//       <Link href='/about'>
-//         <a>Go to About page</a>
-//       </Link> */}
-//       <Layout title='Home'>
-
-//       </Layout>
-//     </>
-//   )
-// }
-
-
-
-// // export default Index
-
-
 import React from 'react'
 import styled from 'styled-components'
 import { makeStyles } from '@material-ui/core/styles';
