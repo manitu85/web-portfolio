@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
+
 const Container = styled.div`
   width: 960px;
   height: 100vh;
@@ -27,10 +28,10 @@ const Layout = ({ children, title }) => {
         </header>
 
     
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       {children}
 
-      <footer>Digital Genetics &copy;{new Date().getFullYear()}</footer>
+      <footer><p>Copyright&copy; Digital Genetics {new Date().getFullYear()}</p></footer>
 
       <style jsx>{`
       .root {
@@ -44,7 +45,7 @@ const Layout = ({ children, title }) => {
         display: flex;
         justify-content: space-around;
         padding: 1em;
-        font-size: 1.5rem;
+        font-size: 1rem;
         background: indigo;
         text-transform: uppercase;
       }

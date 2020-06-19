@@ -5,8 +5,8 @@ import { ServerStyleSheets as MaterialUiServerStyleSheets } from '@material-ui/c
  
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const styledComponentSheet = new StyledComponentSheets()
-    const materialUiSheets = new MaterialUiServerStyleSheets()
+    const styledComponentSheet = new StyledComponentSheets()   // styled component
+    const materialUiSheets = new MaterialUiServerStyleSheets()  // mui
     const originalRenderPage = ctx.renderPage
 
     try {
@@ -26,15 +26,19 @@ class MyDocument extends Document {
       return {
         ...initialProps,
         styles: (
-          <>
+          <React.Fragment key='styles'>
             {initialProps.styles}
             {materialUiSheets.getStyleElement()}
             {styledComponentSheet.getStyleElement()}
-          </>
+          </React.Fragment>
         ),
       }
+    } catch(error) {
+      // handle error
+      console.error(error)
+    
     } finally {
-      sheet.seal()
+      styledComponentSheet.seal()
     }
   }
 

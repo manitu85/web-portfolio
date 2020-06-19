@@ -8,7 +8,10 @@ const GlobalStyle = createGlobalStyle`
   *:before,
   *:after {box-sizing: inherit; }
 
-  html { box-sizing: border-box; font-size: 62.5%; }
+  html { 
+    box-sizing: border-box; 
+    /* font-size: 62.5%;  */
+  }
   
   body {
     margin: 0 auto;

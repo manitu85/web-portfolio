@@ -1,24 +1,5 @@
-// import Link from 'next/link'
-// import Layout from "../components/layout";
-
-// export default () => {
-//   return(
-//     <>
-//       {/* <h1>Home page</h1>
-//       <Link href='/about'>
-//         <a>Go to About page</a>
-//       </Link> */}
-//       <Layout title='Home'>
-
-//       </Layout>
-//     </>
-//   )
-// }
-
-
-
-// // export default Index
-
+import Link from 'next/link'
+import Layout from "../components/layout";
 
 import React from 'react'
 import styled from 'styled-components'
@@ -29,6 +10,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+
 const useStyles = makeStyles({
   root: {
     width: '100%',
@@ -48,39 +30,44 @@ const rows = [
   createData('Cupcake', 305, 3.7, 67, 4.3),
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
-const Home = () => {
+
+export default () => {
   const classes = useStyles();
-  return (
-    <Container>
-      <Paper className={classes.root}>
-        <Table className={classes.table} aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell>Dessert (100g serving)</TableCell>
-              <TableCell align="right">Calories</TableCell>
-              <TableCell align="right">Fat&nbsp;(g)</TableCell>
-              <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-              <TableCell align="right">Protein&nbsp;(g)</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map(row => (
-              <TableRow key={row.name}>
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.calories}</TableCell>
-                <TableCell align="right">{row.fat}</TableCell>
-                <TableCell align="right">{row.carbs}</TableCell>
-                <TableCell align="right">{row.protein}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </Paper>
-    </Container>
+  return(
+    <Layout title='Home'>
+      <Container>
+          <Paper className={classes.root}>
+            <Table className={classes.table} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Dessert (100g serving)</TableCell>
+                  <TableCell align="right">Calories</TableCell>
+                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                  <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows.map(row => (
+                  <TableRow key={row.name}>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                    <TableCell align="right">{row.calories}</TableCell>
+                    <TableCell align="right">{row.fat}</TableCell>
+                    <TableCell align="right">{row.carbs}</TableCell>
+                    <TableCell align="right">{row.protein}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Paper>
+        </Container>
+    </Layout>
   )
 }
+
+
 const Container = styled.div`
   width: 960px;
   height: 100vh;
@@ -88,4 +75,9 @@ const Container = styled.div`
   padding: 2rem;
   background: #f2f2f2;
 `
-export default Home
+
+// // export default Index
+
+
+
+
