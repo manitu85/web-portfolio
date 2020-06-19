@@ -28,7 +28,7 @@ const Layout = ({ children, title }) => {
         </header>
 
     
-      <h2>{title}</h2>
+      <h1>{title}</h1>
       {children}
 
       <footer><p>Copyright&copy; Digital Genetics {new Date().getFullYear()}</p></footer>
