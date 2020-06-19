@@ -45,7 +45,7 @@ const Layout = ({ children, title }) => {
         display: flex;
         justify-content: space-around;
         padding: 1em;
-        font-size: 1rem;
+        font-size: 1.8rem;
         background: indigo;
         text-transform: uppercase;
       }
