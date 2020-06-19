@@ -3,7 +3,7 @@ import App from 'next/app'
 import Head from 'next/head'
 import PropTypes from 'prop-types';
 import GlobalStyle from '../styles/globalStyle'
-// import CssBaseline from '@material-ui/core/CssBaseline';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 import { ThemeProvider as MaterialThemeProvider } from '@material-ui/core/styles';
 import { theme } from '../styles/theme'
@@ -52,7 +52,7 @@ class MyApp extends App {
           <GlobalStyle />
           <MaterialThemeProvider theme={themeMui}>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-            {/* <CssBaseline /> */}
+            <CssBaseline />
             <Component {...pageProps} />
           </MaterialThemeProvider>
         </StyledThemeProvider>
