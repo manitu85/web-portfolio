@@ -1,12 +1,10 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet as StyledComponentSheets } from 'styled-components'
-import { ServerStyleSheets as MaterialUiServerStyleSheets } from '@material-ui/core/styles'
  
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const styledComponentSheet = new StyledComponentSheets()   // styled component
-    const materialUiSheets = new MaterialUiServerStyleSheets()  // mui
     const originalRenderPage = ctx.renderPage
 
     try {
@@ -14,8 +12,7 @@ class MyDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: App => props =>
-            styledComponentSheet.collectStyles(
-              materialUiSheets.collect(<App {...props} />),
+            styledComponentSheet.collectStyles((<App {...props} />),
             ),
         })
 
@@ -28,7 +25,6 @@ class MyDocument extends Document {
         styles: (
           <React.Fragment key='styles'>
             {initialProps.styles}
-            {materialUiSheets.getStyleElement()}
             {styledComponentSheet.getStyleElement()}
           </React.Fragment>
         ),
@@ -59,3 +55,6 @@ class MyDocument extends Document {
 
 
 export default MyDocument
+
+
+
