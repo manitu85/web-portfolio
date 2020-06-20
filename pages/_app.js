@@ -3,9 +3,9 @@ import App from 'next/app'
 import Head from 'next/head'
 import PropTypes from 'prop-types';
 import GlobalStyle from '../styles/globalStyle'
-import CssBaseline from '@material-ui/core/CssBaseline';
+import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
-import { ThemeProvider as MaterialThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider as MaterialThemeProvider } from '@material-ui/core/styles'
 import { theme } from '../styles/theme'
 import themeMui from '../styles/themeMui'
 
@@ -20,7 +20,7 @@ class MyApp extends App {
 
   // useEffect(() => {
   //   // Remove the server-side injected CSS.
-  //   const jssStyles = document.querySelector('#jss-server-side');
+  //   const jssStyles = document.querySelector('#jss-server-side')
   //   if (jssStyles) {
   //     jssStyles.parentElement.removeChild(jssStyles);
   //   }
