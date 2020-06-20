@@ -15,13 +15,13 @@ const Layout = ({ children, title }) => {
             </Link>{' '}
             <Link href="/portfolio">
               <a>Portfolio</a>
-            </Link>
+            </Link>{' '}
             <Link href="/blog">
               <a>Blog</a>
-            </Link>
+            </Link>{' '}
             <Link href="/contact">
               <a>Contact</a>
-            </Link>
+            </Link>{' '}
           </nav>
         </header>
 

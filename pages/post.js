@@ -1,4 +1,4 @@
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import { useRouter } from 'next/router'
 
 const Post = () => {
@@ -8,7 +8,6 @@ const Post = () => {
 
   console.log(router);
   
-
   return(
     <Layout title={title}>
       <p style={{ width: '80vw' }}>
