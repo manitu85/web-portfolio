@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from "../components/layout"
 import styled from 'styled-components'
-import axios from 'axios'
 
 const GridContainer = styled.div`
   display: grid;
@@ -11,11 +10,10 @@ const GridContainer = styled.div`
   margin: 10rem 0;
 `
 
-const About = ({ user }) => {
+const About = () => {
   return(
     <Layout title="About">
       <p>A Javascript Developer</p>
-      {JSON.stringify(user)}
       <GridContainer>
         <img src='/static/js-logo-1.png' alt='JavaScript' height='150px'/>
         <img src='/static/react-logo.png' alt='React' height='150px'/>
@@ -30,16 +28,7 @@ const About = ({ user }) => {
   )
 }
 
-export const getStaticProps = async (ctx) => {
-  const res = await axios.get('https://api.github.com/users/manitu85')
-  const data = await res.data
 
-  return {
-    props: {
-      user: data,
-    },
-  }
-}
 
 export default About
 
