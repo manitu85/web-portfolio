@@ -1,7 +1,7 @@
 import React from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import Layout from '../components/layout'
-import styled from 'styled-components'
+import { Container } from '../styles/container'
 import Error from './_error'
 
 
@@ -46,18 +46,7 @@ export const getStaticProps = async (ctx) => {
 }
 
 
-const Container = styled.div`
-  width: 960px;
-  height: 100vh;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #f2f2f2;
 
-  display: flex;
-  flex-direction: column;
-  justify-items: flex-start;
-  gap: 2rem;
-`
 
 // // export default Index
 
