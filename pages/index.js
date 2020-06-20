@@ -2,16 +2,16 @@ import React from 'react'
 import axios from 'axios'
 import Layout from '../components/layout'
 import styled from 'styled-components'
-// import Error from './_error'
-import Error from 'next/error'
+import Error from './_error'
 
 
-export default ({ user, statusCode }) => {
+export default ({ user, errorCode }) => {
+  console.log(errorCode)
 
   // console.table(user)
 
-  if (statusCode) {
-    return <Error statusCode={statusCode} />
+  if (errorCode) {
+    return <Error statusCode={errorCode} />
   }
 
   return(
@@ -28,15 +28,20 @@ export default ({ user, statusCode }) => {
 }
 
 export const getStaticProps = async (ctx) => {
-  const res = await axios.get('https://api.github.com/users/manitu85')
-  const statusCode = res.status > 200 ? res.status : false
-  const data = await res.data
+  // doesn't work with axios
+  // const res = await axios.get('https://api.github.com/users/manitu85lkjlk')
+  // const statusCode = res.status > 200 ? res.status : false
+  // const data = await res.data
+
+  const res = await fetch('https://api.github.com/users/manitu85')
+  const errorCode = res.status > 200 ? res.status : false
+  const data = await res.json()
 
   return {
     props: {
       user: data,
-      statusCode
-    },
+      errorCode
+    }
   }
 }
 
