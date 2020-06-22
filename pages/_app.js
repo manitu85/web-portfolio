@@ -23,9 +23,9 @@ const App = props => {
       {/* next-seo */}
       <Head>
         <title>web portfolio</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         {/* PWA primary color */}
         <meta name="theme-color" content={({ theme }) => theme.color.primary} />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta
           name='description'
           content='A site for my programming portfolio'

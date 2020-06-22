@@ -1,71 +1,38 @@
 import Link from 'next/link'
-// import styled from 'styled-components'
+import {
+  Root,
+  Header,
+  HeaderLink,
+  Nav,
+  Footer } from './layout.styles';
 
 
 const Layout = ({ children, title }) => {
   return (
-    <div className="root">
-        <header>
-          <nav>
+    <Root className="root">
+        <Header>
+          <Nav>
             <Link href="/">
-              <a>Home</a>
+              <HeaderLink>Home</HeaderLink>
             </Link>{' '}
             <Link href="/about">
-              <a>About</a>
+              <HeaderLink>About</HeaderLink>
             </Link>{' '}
             <Link href="/portfolio">
-              <a>Portfolio</a>
+              <HeaderLink>Portfolio</HeaderLink>
             </Link>{' '}
             <Link href="/blog">
-              <a>Blog</a>
+              <HeaderLink>Blog</HeaderLink>
             </Link>{' '}
             <Link href="/contact">
-              <a>Contact</a>
+              <HeaderLink>Contact</HeaderLink>
             </Link>{' '}
-          </nav>
-        </header>
-
-    
+          </Nav>
+        </Header>
       <h1>{title}</h1>
       {children}
-
-      <footer><p>Copyright&copy; Digital Genetics {new Date().getFullYear()}</p></footer>
-
-      <style jsx>{`
-      .root {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      }
-      header {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        padding: 1em;
-        font-size: 1.8rem;
-        background: indigo;
-        text-transform: uppercase;
-      }
-      header nav {
-        display: flex;
-        justify-content: space-around;
-        width: 50%;
-      }
-
-      header a {
-        color: darkgrey;
-        text-decoration: none;
-      }
-      header a:hover {
-        font-weight: bold;
-        color: lightgrey;
-      }
-      footer {
-        padding: 1em;
-      }
-    `}</style>
-    </div>
+      <Footer><p>Copyright&copy; Digital Genetics {new Date().getFullYear()}</p></Footer>
+    </Root>
   )
 }
 
