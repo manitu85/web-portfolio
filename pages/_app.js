@@ -24,7 +24,7 @@ const App = props => {
       <Head>
         <title>web portfolio</title>
         {/* PWA primary color */}
-        {/* <meta name="theme-color" content={theme.color.primary} /> */}
+        <meta name="theme-color" content={({ theme }) => theme.color.primary} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta
           name='description'
@@ -52,10 +52,3 @@ App.propTypes = {
   pageProps: PropTypes.object.isRequired,
 }
 
-// Router.onRouteChangeStart = url => {
-//   console.log(url)
-//   NProgress.start()
-//   NProgress.configure({ easing: 'ease', speed: 200 })
-// }
-// Router.routeChangeComplete = () => NProgress.done()
-// Router.routeChangeError = () => NProgress.done()
