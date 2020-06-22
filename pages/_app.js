@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import Router from 'next/router'
 import NProgress from 'nprogress'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
-import GlobalStyle from '../styles/globalStyle'
-import { theme } from '../styles/theme'
+import GlobalStyle from '../components/styles/global.styles'
+import { theme } from '../components/styles/theme.styles'
 import 'nprogress/nprogress.css'
 
 

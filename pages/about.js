@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from "../components/layout"
+import Layout from '../components/hoc/layout.component'
 import styled from 'styled-components'
 
 const GridContainer = styled.div`

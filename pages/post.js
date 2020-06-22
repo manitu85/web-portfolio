@@ -1,12 +1,12 @@
-import Layout from '../components/layout'
 import { useRouter } from 'next/router'
+import Layout from '../components/hoc/layout.component'
 
 const Post = () => {
 
   const router = useRouter()
   const { title } = router.query
 
-  console.log(router)
+  // console.log(router)
   
   return(
     <Layout title={title}>

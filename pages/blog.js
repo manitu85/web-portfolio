@@ -1,4 +1,4 @@
-import Layout from '../components/layout'
+import Layout from '../components/hoc/layout.component'
 import Link from 'next/link'
 
 const PostLink = ({ slug, title }) => (

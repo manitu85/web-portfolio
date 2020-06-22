@@ -1,14 +1,12 @@
 import React from 'react'
 // import axios from 'axios'
-import Layout from '../components/layout'
-import { Container } from '../styles/container'
+import Layout from '../components/hoc/layout.component'
+import { Container } from '../components/styles/container.styles'
 import Error from './_error'
 
 
 export default ({ user, errorCode }) => {
-  console.log(errorCode)
-
-  // console.table(user)
+  // console.log(errorCode)
 
   if (errorCode) {
     return <Error statusCode={errorCode} />

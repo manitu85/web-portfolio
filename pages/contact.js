@@ -1,6 +1,4 @@
-import Link from 'next/link'
-import Layout from "../components/layout";
-
+import Layout from '../components/hoc/layout.component'
 
 const Contact = () => {
   return (
