@@ -6,7 +6,7 @@ const Post = () => {
   const router = useRouter()
   const { title } = router.query
 
-  console.log(router);
+  console.log(router)
   
   return(
     <Layout title={title}>
