@@ -1,14 +1,8 @@
 import React from 'react'
 import Layout from '../components/hoc/layout.component'
-import styled from 'styled-components'
+import { GridContainer } from '../components/styles/container.styles'
 
-const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  justify-items: center;
-  grid-column-gap: 2rem;
-  margin: 10rem 0;
-`
+
 
 const About = () => {
   return(

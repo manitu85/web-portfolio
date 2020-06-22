@@ -12,3 +12,11 @@ export const Container = styled.div`
   justify-items: flex-start;
   gap: 2rem;
 `
+
+export const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-items: center;
+  grid-column-gap: 2rem;
+  margin: 10rem 0;
+`
