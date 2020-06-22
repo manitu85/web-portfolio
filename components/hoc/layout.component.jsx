@@ -1,4 +1,5 @@
-import Link from 'next/link'
+// import Link from 'next/link'
+import StyledLink from '../styles/link.styles'
 import {
   Root,
   Header,
@@ -12,21 +13,21 @@ const Layout = ({ children, title }) => {
     <Root className="root">
         <Header>
           <Nav>
-            <Link href="/">
-              <HeaderLink>Home</HeaderLink>
-            </Link>{' '}
-            <Link href="/about">
-              <HeaderLink>About</HeaderLink>
-            </Link>{' '}
-            <Link href="/portfolio">
-              <HeaderLink>Portfolio</HeaderLink>
-            </Link>{' '}
-            <Link href="/blog">
-              <HeaderLink>Blog</HeaderLink>
-            </Link>{' '}
-            <Link href="/contact">
-              <HeaderLink>Contact</HeaderLink>
-            </Link>{' '}
+            <StyledLink href="/">
+              Home
+            </StyledLink>{' '}
+            <StyledLink href="/about">
+              About
+            </StyledLink>{' '}
+            <StyledLink href="/portfolio">
+              Portfolio
+            </StyledLink>{' '}
+            <StyledLink href="/blog">
+              Blog
+            </StyledLink>{' '}
+            <StyledLink href="/contact">
+              Contact
+            </StyledLink>
           </Nav>
         </Header>
       <h1>{title}</h1>

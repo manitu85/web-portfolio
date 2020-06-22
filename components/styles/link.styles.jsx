@@ -8,16 +8,18 @@ const StyledLink = ({ as, children, className, href }) => (
 )
 
 export default styled(StyledLink)`
-  color: #0075e0;
+  color: darkgrey;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 
   &:hover {
-    color: #40a9ff;
+    font-weight: bold;
+    color: lightgrey;
   }
 
   &:focus {
-    color: #40a9ff;
+    color: darkgrey;
     outline: none;
     border: 0;
   }
@@ -26,8 +28,6 @@ export default styled(StyledLink)`
 // Usage
 // import StyledLink from '../components/StyledLink'
 
-// export default () => (
-//   <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-//     First post
-//   </StyledLink>
-// )
+//  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
+//    First post
+//  </StyledLink>
