@@ -26,7 +26,7 @@ export default styled(StyledLink)`
 `
 
 // Usage
-// import StyledLink from '../components/StyledLink'
+// import StyledLink from '../components/styles/StyledLink'
 
 //  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
 //    First post
