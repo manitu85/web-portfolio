@@ -4,7 +4,7 @@ const Error = ({ statusCode }) => (
   <Layout title='Error!!!'>
     {statusCode
       ? `Could not load your user data: Status Code ${statusCode}`
-      : `Couldn't get that page, sorry!`}
+      : `Couldn't get that page, sorry! Status Code ${statusCode}`}
   </Layout>
 )
 
