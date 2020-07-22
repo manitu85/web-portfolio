@@ -8,10 +8,10 @@ const Error = ({ statusCode }) => (
   </Layout>
 )
 
-// export const getStaticProps = ({ res, err }) => {
-//   const statusCode = res ? res.statusCode : err ? err.statusCode : 404
-//   return { props: {statusCode} }
-// }
+ export const getStaticProps = ({ res, err }) => {
+   const statusCode = res ? res.statusCode : err ? err.statusCode : 404
+   return { props: {statusCode} }
+ }
 
 
 export default Error
